@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_BLOCK_INFO_H_
-#define MINIDB_BLOCK_INFO_H_
+#ifndef BeerDB_BLOCK_INFO_H_
+#define BeerDB_BLOCK_INFO_H_
 
 #include <sys/types.h>
 
@@ -64,4 +64,4 @@ class BlockInfo {
   void WriteInfo(std::string path);
 };
 
-#endif /* MINIDB_BLOCK_INFO_H_ */
+#endif /* BeerDB_BLOCK_INFO_H_ */

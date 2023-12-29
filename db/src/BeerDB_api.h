@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_MINIDB_API_H_
-#define MINIDB_MINIDB_API_H_
+#ifndef BeerDB_BeerDB_API_H_
+#define BeerDB_BeerDB_API_H_
 
 #include <string>
 
@@ -9,7 +9,7 @@
 #include "catalog_manager.h"
 #include "sql_statement.h"
 
-class MiniDBAPI {
+class BeerDBAPI {
  private:
   std::string path_;
   CatalogManager *cm_;
@@ -17,8 +17,8 @@ class MiniDBAPI {
   std::string curr_db_;
 
  public:
-  MiniDBAPI(std::string p);
-  ~MiniDBAPI();
+  BeerDBAPI(std::string p);
+  ~BeerDBAPI();
   void Quit();
   void Help();
   void CreateDatabase(SQLCreateDatabase &st);
@@ -36,4 +36,4 @@ class MiniDBAPI {
   void Update(SQLUpdate &st);
 };
 
-#endif /* MINIDB_MINIDB_API_H_ */
+#endif /* BeerDB_BeerDB_API_H_ */

@@ -31,7 +31,7 @@ static std::string &trim(std::string &s) {
 //   using_history();
 
 //   while (true) {
-//     line = readline("MiniDB> ");
+//     line = readline("BeerDB> ");
 //     sql = string(line);
 //     free(line);
 //     trim(sql);

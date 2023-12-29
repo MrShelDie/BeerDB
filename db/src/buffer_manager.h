@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_BUFFER_MANAGER_H_
-#define MINIDB_BUFFER_MANAGER_H_
+#ifndef BeerDB_BUFFER_MANAGER_H_
+#define BeerDB_BUFFER_MANAGER_H_
 
 #include <string>
 
@@ -30,4 +30,4 @@ class BufferManager {
   void WriteToDisk();
 };
 
-#endif /* defined(MINIDB_HANDLE_H_) */
+#endif /* defined(BeerDB_HANDLE_H_) */

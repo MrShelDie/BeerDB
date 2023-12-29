@@ -1,7 +1,7 @@
 //  Author: dennetki@21-school.ru (Elmanov Alexander)
 
-#ifndef MINIDB_INDEX_MANAGER_H_
-#define MINIDB_INDEX_MANAGER_H_
+#ifndef BeerDB_INDEX_MANAGER_H_
+#define BeerDB_INDEX_MANAGER_H_
 
 #include <string>
 

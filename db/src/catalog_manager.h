@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_CATALOG_MANAGER_H_
-#define MINIDB_CATALOG_MANAGER_H_
+#ifndef BeerDB_CATALOG_MANAGER_H_
+#define BeerDB_CATALOG_MANAGER_H_
 
 #include <cereal/archives/binary.hpp>
 #include <cereal/types/memory.hpp>

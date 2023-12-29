@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_FILE_INFO_H_
-#define MINIDB_FILE_INFO_H_
+#ifndef BeerDB_FILE_INFO_H_
+#define BeerDB_FILE_INFO_H_
 
 #include <string>
 

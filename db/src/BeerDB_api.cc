@@ -1,6 +1,6 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#include "minidb_api.h"
+#include "BeerDB_api.h"
 
 #include <experimental/filesystem>
 #include <fstream>
@@ -15,22 +15,22 @@
 using namespace std;
 namespace fs = std::experimental::filesystem;
 
-MiniDBAPI::MiniDBAPI(std::string p) : path_(p) { cm_ = new CatalogManager(p); }
+BeerDBAPI::BeerDBAPI(std::string p) : path_(p) { cm_ = new CatalogManager(p); }
 
-MiniDBAPI::~MiniDBAPI() {
+BeerDBAPI::~BeerDBAPI() {
   // hdl_ is initialized in #Use#
   delete hdl_;
   delete cm_;
 }
 
-void MiniDBAPI::Quit() {
+void BeerDBAPI::Quit() {
   delete hdl_;
   delete cm_;
   std::cout << "Quiting..." << std::endl;
 }
 
-void MiniDBAPI::Help() {
-  std::cout << "MiniDB 1.0.0" << std::endl;
+void BeerDBAPI::Help() {
+  std::cout << "BeerDB 1.0.0" << std::endl;
   std::cout << "Implemented SQL types:" << std::endl;
   std::cout << "#QUIT#" << std::endl;
   std::cout << "#HELP#" << std::endl;
@@ -50,7 +50,7 @@ void MiniDBAPI::Help() {
   std::cout << "#UPDATE#" << std::endl;
 }
 
-void MiniDBAPI::CreateDatabase(SQLCreateDatabase &st) {
+void BeerDBAPI::CreateDatabase(SQLCreateDatabase &st) {
   std::cout << "Creating database: " << st.db_name() << std::endl;
   std::string folder_name(path_ + st.db_name());
   fs::path folder_path(folder_name);
@@ -73,7 +73,7 @@ void MiniDBAPI::CreateDatabase(SQLCreateDatabase &st) {
   cm_->WriteArchiveFile();
 }
 
-void MiniDBAPI::ShowDatabases() {
+void BeerDBAPI::ShowDatabases() {
   std::vector<Database> dbs = cm_->dbs();
   std::cout << "DATABASE LIST:" << std::endl;
   for (unsigned int i = 0; i < dbs.size(); ++i) {
@@ -82,7 +82,7 @@ void MiniDBAPI::ShowDatabases() {
   }
 }
 
-void MiniDBAPI::DropDatabase(SQLDropDatabase &st) {
+void BeerDBAPI::DropDatabase(SQLDropDatabase &st) {
   std::cout << "Dropping database: " << st.db_name() << std::endl;
 
   bool found = false;
@@ -118,7 +118,7 @@ void MiniDBAPI::DropDatabase(SQLDropDatabase &st) {
   }
 }
 
-void MiniDBAPI::Use(SQLUse &st) {
+void BeerDBAPI::Use(SQLUse &st) {
   Database *db = cm_->GetDB(st.db_name());
 
   if (db == NULL) {
@@ -134,7 +134,7 @@ void MiniDBAPI::Use(SQLUse &st) {
   hdl_ = new BufferManager(path_);
 }
 
-void MiniDBAPI::CreateTable(SQLCreateTable &st) {
+void BeerDBAPI::CreateTable(SQLCreateTable &st) {
   std::cout << "Creating table: " << st.tb_name() << std::endl;
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
@@ -166,7 +166,7 @@ void MiniDBAPI::CreateTable(SQLCreateTable &st) {
   cm_->WriteArchiveFile();
 }
 
-void MiniDBAPI::ShowTables() {
+void BeerDBAPI::ShowTables() {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }
@@ -187,7 +187,7 @@ void MiniDBAPI::ShowTables() {
   }
 }
 
-void MiniDBAPI::Insert(SQLInsert &st) {
+void BeerDBAPI::Insert(SQLInsert &st) {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }
@@ -202,7 +202,7 @@ void MiniDBAPI::Insert(SQLInsert &st) {
   delete rm;
 }
 
-void MiniDBAPI::Select(SQLSelect &st) {
+void BeerDBAPI::Select(SQLSelect &st) {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }
@@ -218,7 +218,7 @@ void MiniDBAPI::Select(SQLSelect &st) {
   delete rm;
 }
 
-void MiniDBAPI::CreateIndex(SQLCreateIndex &st) {
+void BeerDBAPI::CreateIndex(SQLCreateIndex &st) {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }
@@ -238,7 +238,7 @@ void MiniDBAPI::CreateIndex(SQLCreateIndex &st) {
   delete im;
 }
 
-void MiniDBAPI::DropTable(SQLDropTable &st) {
+void BeerDBAPI::DropTable(SQLDropTable &st) {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }
@@ -280,7 +280,7 @@ void MiniDBAPI::DropTable(SQLDropTable &st) {
   cm_->WriteArchiveFile();
 }
 
-void MiniDBAPI::DropIndex(SQLDropIndex &st) {
+void BeerDBAPI::DropIndex(SQLDropIndex &st) {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }
@@ -308,7 +308,7 @@ void MiniDBAPI::DropIndex(SQLDropIndex &st) {
   cm_->WriteArchiveFile();
 }
 
-void MiniDBAPI::Delete(SQLDelete &st) {
+void BeerDBAPI::Delete(SQLDelete &st) {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }
@@ -329,7 +329,7 @@ void MiniDBAPI::Delete(SQLDelete &st) {
   delete rm;
 }
 
-void MiniDBAPI::Update(SQLUpdate &st) {
+void BeerDBAPI::Update(SQLUpdate &st) {
   if (curr_db_.length() == 0) {
     throw NoDatabaseSelectedException();
   }

@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_COMMONS_H_
-#define MINIDB_COMMONS_H_
+#ifndef BeerDB_COMMONS_H_
+#define BeerDB_COMMONS_H_
 
 // File Format
 #define FORMAT_RECORD 0
