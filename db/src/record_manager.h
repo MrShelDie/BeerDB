@@ -1,7 +1,7 @@
 //  Author: dennetki@21-school.ru (Elmanov Alexander)
 
-#ifndef MINIDB_RECORD_MANAGER_H_
-#define MINIDB_RECORD_MANAGER_H_
+#ifndef BeerDB_RECORD_MANAGER_H_
+#define BeerDB_RECORD_MANAGER_H_
 
 #include <string>
 #include <vector>
@@ -36,4 +36,4 @@ class RecordManager {
   bool SatisfyWhere(Table *tbl, std::vector<TKey> keys, SQLWhere where);
 };
 
-#endif /* MINIDB_RECORD_MANAGER_H_ */
+#endif /* BeerDB_RECORD_MANAGER_H_ */

@@ -1,7 +1,7 @@
 //  Author: dennetki@21-school.ru (Elmanov Alexander)
 
-#ifndef MINIDB_EXCEPTIONS_H_
-#define MINIDB_EXCEPTIONS_H_
+#ifndef BeerDB_EXCEPTIONS_H_
+#define BeerDB_EXCEPTIONS_H_
 
 #include <exception>
 

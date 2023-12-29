@@ -1,7 +1,7 @@
 //  Author: dennetki@21-school.ru (Elmanov Alexander)
 
-#ifndef MINIDB_SQL_STATEMENT_H_
-#define MINIDB_SQL_STATEMENT_H_
+#ifndef BeerDB_SQL_STATEMENT_H_
+#define BeerDB_SQL_STATEMENT_H_
 
 #include <string>
 #include <vector>

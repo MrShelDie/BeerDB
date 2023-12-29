@@ -8,13 +8,13 @@
 #include <regex>
 
 #include "exceptions.h"
-#include "minidb_api.h"
+#include "BeerDB_api.h"
 
 using namespace std;
 
 Interpreter::Interpreter() : sql_type_(-1) {
-  string p = string(getenv("HOME")) + "/MiniDBData/";
-  api = new MiniDBAPI(p);
+  string p = string(getenv("HOME")) + "/BeerDBData/";
+  api = new BeerDBAPI(p);
 }
 
 Interpreter::~Interpreter() { delete api; }

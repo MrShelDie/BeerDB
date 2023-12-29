@@ -1,17 +1,17 @@
 //  Author: dennetki@21-school.ru (Elmanov Alexander)
 
-#ifndef MINIDB_INTERPRETER_H_
-#define MINIDB_INTERPRETER_H_
+#ifndef BeerDB_INTERPRETER_H_
+#define BeerDB_INTERPRETER_H_
 
 #include <string>
 #include <vector>
 
-#include "minidb_api.h"
+#include "BeerDB_api.h"
 #include "sql_statement.h"
 
 class Interpreter {
  private:
-  MiniDBAPI *api;
+  BeerDBAPI *api;
   std::string sql_statement_;
   std::vector<std::string> sql_vector_;
   int sql_type_;
@@ -25,4 +25,4 @@ class Interpreter {
   void ExecSQL(std::string statement);
 };
 
-#endif /* MINIDB_INTERPRETER_H_ */
+#endif /* BeerDB_INTERPRETER_H_ */

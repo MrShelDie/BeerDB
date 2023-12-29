@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_FILE_HANDLE_H_
-#define MINIDB_FILE_HANDLE_H_
+#ifndef BeerDB_FILE_HANDLE_H_
+#define BeerDB_FILE_HANDLE_H_
 
 #include <string>
 
@@ -26,4 +26,4 @@ class FileHandle {
   void WriteToDisk();
 };
 
-#endif /* defined(MINIDB_FILE_HANDLE_H_) */
+#endif /* defined(BeerDB_FILE_HANDLE_H_) */

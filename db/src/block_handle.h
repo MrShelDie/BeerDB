@@ -1,7 +1,7 @@
 //  Author: mrsheldie@mail.ru (Ivchenko Nikolay)
 
-#ifndef MINIDB_BLOCK_HANDLE_H_
-#define MINIDB_BLOCK_HANDLE_H_
+#ifndef BeerDB_BLOCK_HANDLE_H_
+#define BeerDB_BLOCK_HANDLE_H_
 
 #include "block_info.h"
 
@@ -30,4 +30,4 @@ class BlockHandle {
   void FreeBlock(BlockInfo *block);
 };
 
-#endif /* defined(MINIDB_BLOCK_HANDLE_H_) */
+#endif /* defined(BeerDB_BLOCK_HANDLE_H_) */
