@@ -1,4 +1,4 @@
-# BeerDB: Mini Database in C++
+# BeerDB: A Compact Database in C++
 
 Introduction to DBMS. Developing a simple BeerDB for your own.
 
@@ -20,7 +20,7 @@ The russian version of the task can be found in the repository.
 
 ## Chapter I
 
-![MiniBD](misc/images/s21_containers.png)
+![BeerDB](img/s21_containers.png)
 
 Planet Earth, somewhere among the massive containers in the port, October 29, 1993.
 
